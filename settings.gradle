@@ -1,0 +1,3 @@
+rootProject.name = "FFmpegApi"
+include ':app'
+include ':FFmpegApi'
