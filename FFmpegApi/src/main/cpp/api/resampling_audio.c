@@ -48,7 +48,6 @@ struct SwrContext *init_swr_context(int src_rate, int src_nb_channels, int src_b
 }
 
 int resample(struct SwrContext *swr_cxt, uint8_t **dst_data, int dst_nb_samples, uint8_t **src_data, int src_nb_samples) {
-    resample_log(4, "resample %d %d %d\n", swr_cxt, dst_nb_samples, src_nb_samples);
     if (swr_cxt) {
         /* convert to destination format */
         int ret = swr_convert(swr_cxt, dst_data, dst_nb_samples, (const uint8_t **) src_data, src_nb_samples);
